@@ -3,7 +3,7 @@ def Student():
     name='Raj'#local
     print(name)
 Student()#after execution the data is removed from memory
-print(name)#no output as it is local variable it gives name error
+#print(name)#no output as it is local variable it gives name error
 #Global
 company='Codegnan'
 def display():
@@ -14,17 +14,17 @@ print(company)
 num=10
 def Update():
     num=100 #local is preferd first
-    print("Inside function",number)
+    print("Inside function",num)
 Update()
-print("Outside function",number)
+print("Outside function",num)
 #To modify global variable in local we use global keyword
 num=10
 def Update():
     global num
     num=100 #local is preferd first
-    print("Inside function",number)
+    print("Inside function",num)
 Update()
-print("Outside function",number)
+print("Outside function",num)
 #Non local scope used in nested function
 def outer():
     def inner():
@@ -70,31 +70,31 @@ Cart(cart)
 print("after calling function",cart)
 #Lambda Function
 #1)Square of number
-square=Lambda x:x*x
+square=lambda x:x*x
 print(square(10))
 #2)Addition of 2 nos
-add=Lambda a,b:a+b
+add=lambda a,b:a+b
 print(add(10,20))
 #3)Lambda with if-else
-maxi=Lambda a,b:a if a>b else b
+maxi=lambda a,b:a if a>b else b
 print(maxi(10,20))
 
 #MAP
 l=[10,20,30,40]
-r=list(map(Lambda x:x+5,l))
+r=list(map(lambda x:x+5,l))
 print(r)
 #FILTER
 l1=[1,2,3,4]
-res=list(filter(Lambda x:x%2==0,l))
+res=list(filter(lambda x:x%2==0,l))
 print(res)
 #REDUCE
-from functools import REDUCE
+from functools import reduce
 l2=[1,2,3,4]
-r1=reduce(Lambda x,y:x+y,l2)
+r1=reduce(lambda x,y:x+y,l2)
 print(r1)
 
 #Sorting
 l4=[('raj',23),("Blake",45),('Allen',89)]
-r2=sorted(l4,key=Lambda x:x[1],reverse=True) #Descending order
+r2=sorted(l4,key=lambda x:x[1],reverse=True) #Descending order
 print(r2)
 

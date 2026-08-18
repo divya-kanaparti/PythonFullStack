@@ -23,7 +23,7 @@ def Addition(a,b):
     print("end")#unreachable code
 r=Addition(10,20)
 print(r)
-Addition(10)#type error
+#Addition(10)#type error
 #ii)calling function with args,without retutn type
 def welcome(name,age):
     print(f'my name is {name} and age is {age}')
